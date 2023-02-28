@@ -1,19 +1,19 @@
 import express from 'express' //importar express
 import {conectar, agregarContacto, obteberContactos, borrarContacto} from './src/mysql_conector.js'
 let todos
-const app = express() // iniciamos express
+const app = express()
 
 //Iniciamos servidor
 app.listen('8000',function(){
     console.log('aplicacion iniciada en el puerto 8000')
 })
 
-//Conf de pug
-app.set('views','./vistas')
+
+app.set('views','./src/vistas')
 app.set('view engine','pug')
 
-//conf de archivos estaticos
-app.use(express.static('./vistas'))
+
+app.use(express.static('./src/vistas'))
 app.use(express.static('./src'))
 app.use(express.static('./css'))
 

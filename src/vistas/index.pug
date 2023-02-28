@@ -10,6 +10,6 @@ html
             button(id="btn_agregar") agregar contacto
             each contacto in contactos
                 div.contacto
-                    p=`${contacto.id_agenda} -- ${contacto.nombre_contacto}`
-                    span(class="borrar material-icons" id=contacto.id_agenda) delete
+                    p=`${contacto.id_contacto} -- ${contacto.nombre_contacto}`
+                    span(class="borrar material-icons" id=contacto.id_contacto) delete
     script(src="funciones.js")

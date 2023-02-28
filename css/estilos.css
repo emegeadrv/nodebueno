@@ -1,5 +1,5 @@
 body{
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: white;
     color: white;
 }
 
@@ -16,7 +16,8 @@ input, button{
     line-height: 1.8rem;
 }
 button{
-    background-color: goldenrod;
+    background-color: red;
+    width: 100%;
 }
 .contacto{
     display: flex;

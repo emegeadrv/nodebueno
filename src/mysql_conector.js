@@ -3,10 +3,10 @@ import mysql from 'mysql'
 let todos
 //crear la conexion
 const conector = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '',
-    database: 'mibd'
+    host: 'db4free.net',
+    user: 'migueldespliegue',
+    password: '12345678',
+    database: 'migueldespliegue'
 })
 
 const conectar=()=>{
@@ -17,7 +17,7 @@ const conectar=()=>{
 }
 
 const agregarContacto=(numero, nombre) => {
-    const sql = `INSERT INTO contactos (id_agenda, numero_contacto, nombre_contacto) VALUES (${null}, ${numero}, "${nombre}")`
+    const sql = `INSERT INTO contactos (id_contacto, numero_contacto, nombre_contacto) VALUES (${null}, ${numero}, "${nombre}")`
     conector.query(sql, function(err, result, filed){
         if(err)throw err
         console.log(result)
@@ -33,7 +33,7 @@ const obteberContactos = () => {
 }
 
 const borrarContacto= id => {
-    const sql = `DELETE FROM contactos where id_agenda=${id}`
+    const sql = `DELETE FROM contactos where id_contacto=${id}`
     conector.query(sql)
 }
 
